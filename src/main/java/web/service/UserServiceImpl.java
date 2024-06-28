@@ -5,6 +5,7 @@ import web.dao.UserDao;
 import web.model.User;
 
 import java.util.List;
+
 @Service
 public class UserServiceImpl implements UserService {
     private final UserDao userDao;
@@ -14,27 +15,27 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<User> index() {
-        return userDao.index();
+    public List<User> getAllUsers() {
+        return userDao.getAllUsers();
     }
 
     @Override
-    public User show(Long id) {
-        return userDao.show(id);
+    public User showUser(Long id) {
+        return userDao.showUser(id);
     }
 
     @Override
-    public void save(User user) {
-        userDao.save(user);
+    public void saveUser(User user) {
+        userDao.saveUser(user);
     }
 
     @Override
-    public void update(User updateUser) {
-        userDao.update(updateUser);
+    public void updateUser(User updateUser) {
+        userDao.updateUser(updateUser);
     }
 
     @Override
-    public void delete(Long id) {
-        userDao.delete(id);
+    public void deleteUser(Long id) {
+        userDao.deleteUser(id);
     }
 }

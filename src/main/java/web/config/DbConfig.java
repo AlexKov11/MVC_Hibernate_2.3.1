@@ -26,6 +26,7 @@ public class DbConfig {
     public DbConfig(Environment env) {
         this.env = env;
     }
+
     @Bean
     public DataSource getDataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
